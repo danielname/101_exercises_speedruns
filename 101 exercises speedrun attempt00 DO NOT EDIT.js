@@ -795,7 +795,13 @@ addToDone("Exercise 51 is correct.")
 
 // Exercise 52
 // Write a function definition named third that takes in sequence and returns the third value of that sequence.
-
+function third(i){
+    if (typeof i === 'string'){
+        let iArray = i.split('')
+        return iArray[2];
+    }
+    return i[2];
+}
 assert(third("ubuntu"), "u", "Exercise 52");
 assert(third([1, 2, 3]), 3, "Exercise 52");
 assert(third(["JS", "is", "awesome"]), "awesome", "Exercise 52");
@@ -804,7 +810,13 @@ addToDone("Exercise 52 is correct.")
 
 // Exercise 53
 // Write a function definition named forth that takes in sequence and returns the forth value of that sequence.
-
+function forth (i){
+    if (typeof i === 'string'){
+        let iArray = i.split('')
+        return iArray[3];
+    }
+    return i[3];
+}
 assert(forth("ubuntu"), "n", "Exercise 53");
 assert(forth([1, 2, 3, 4]), 4, "Exercise 53");
 assert(forth(["JS", "is", "awesome", "right?"]), "right?", "Exercise 53");
@@ -813,7 +825,13 @@ addToDone("Exercise 53 is correct.")
 
 // Exercise 54
 // Write a function definition named last that takes in sequence and returns the last value of that sequence.
-
+function last(i){
+    if (typeof i === 'string'){
+        let iArray = i.split('')
+        return iArray[iArray.length -1];
+    }
+    return i[i.length - 1];
+}
 assert(last("ubuntu"), "u", "Exercise 54");
 assert(last([1, 2, 3, 4]), 4, "Exercise 54");
 assert(last(["JS", "is", "awesome"]), "awesome", "Exercise 54");
@@ -823,7 +841,13 @@ addToDone("Exercise 54 is correct.")
 
 // Exercise 55
 // Write a function definition named secondToLast that takes in sequence and returns the second to last value of that sequence.
-
+function secondToLast(i){
+    if (typeof i === 'string'){
+        let iArray = i.split('')
+        return iArray[iArray.length -2];
+    }
+    return i[i.length - 2];
+}
 assert(secondToLast("ubuntu"), "t", "Exercise 55");
 assert(secondToLast([1, 2, 3, 4]), 3, "Exercise 55");
 assert(secondToLast(["JS", "is", "awesome"]), "is", "Exercise 55");
@@ -833,7 +857,13 @@ addToDone("Exercise 55 is correct.")
 
 // Exercise 56
 // Write a function definition named thirdToLast that takes in sequence and returns the third to last value of that sequence.
-
+function thirdToLast(i){
+    if (typeof i === 'string'){
+        let iArray = i.split('')
+        return iArray[iArray.length -3];
+    }
+    return i[i.length - 3];
+}
 assert(thirdToLast("ubuntu"), "n", "Exercise 56");
 assert(thirdToLast([1, 2, 3, 4]), 2, "Exercise 56");
 assert(thirdToLast(["JS", "is", "awesome"]), "JS", "Exercise 56");
@@ -843,7 +873,9 @@ addToDone("Exercise 56 is correct.")
 
 // Exercise 57
 // Write a function definition named firstAndSecond that takes in sequence and returns the first and second value of that sequence as an array
-
+function firstAndSecond(a){
+    return [a[0],a[1]];
+}
 assert(firstAndSecond([1, 2, 3, 4]), [1, 2], "Exercise 57");
 assert(firstAndSecond(["JS", "is", "awesome"]), ["JS", "is"], "Exercise 57");
 assert(firstAndSecond(["strawberry", "kiwi", "mango", "guava"]), ["strawberry", "kiwi"], "Exercise 57");
@@ -852,7 +884,9 @@ addToDone("Exercise 57 is correct.")
 
 // Exercise 58
 // Write a function definition named firstAndLast that takes in sequence and returns the first and last value of that sequence as an array
-
+function firstAndLast(a){
+    return [a[0],a[a.length -1]];
+}
 assert(firstAndLast([1, 2, 3, 4]), [1, 4], "Exercise 58");
 assert(firstAndLast(["JS", "is", "awesome"]), ["JS", "awesome"], "Exercise 58");
 assert(firstAndLast(["strawberry", "kiwi", "mango", "guava"]), ["strawberry", "guava"], "Exercise 58");
@@ -862,7 +896,10 @@ addToDone("Exercise 58 is correct.")
 
 // Exercise 59
 // Write a function definition named firstToLast that takes in sequence and returns the sequence with the first value moved to the end of the sequence.
-
+function firstToLast(a){
+    let a1 = a.shift();
+    return a.push(a1);
+}
 assert(firstToLast([1, 2, 3, 4]), [2, 3, 4, 1], "Exercise 59");
 assert(firstToLast(["JS", "is", "awesome"]), ["is", "awesome", "JS"], "Exercise 59");
 assert(firstToLast(["strawberry", "kiwi", "mango", "guava"]), ["kiwi", "mango", "guava", "strawberry"], "Exercise 59");
@@ -872,7 +909,13 @@ addToDone("Exercise 59 is correct.")
 
 // Exercise 60
 // Write a function definition named sumAll that takes in sequence of numbers and returns all the numbers added together.
-
+function sumAll(a){
+    let sum = 0;
+    for (let i=0; i<a.length; i++){
+        sum+=a[i];
+    }
+    return sum;
+}
 assert(sumAll([1, 2, 3, 4]), 10, "Exercise 60");
 assert(sumAll([3, 3, 3]), 9, "Exercise 60");
 assert(sumAll([0, 5, 6]), 11, "Exercise 60");
@@ -882,7 +925,13 @@ addToDone("Exercise 60 is correct.")
 
 //  Exercise 61
 //  Write a function definition named mean that takes in sequence of numbers and returns the average value
-
+function mean(a){
+    let sum = 0;
+    for (let i=0; i<a.length; i++){
+        sum+=a[i];
+    }
+    return sum/a.length;
+}
 assert(mean([1, 2, 3, 4]), 2.5, "Exercise 61");
 assert(mean([3, 3, 3]), 3, "Exercise 61");
 assert(mean([1, 5, 6]), 4, "Exercise 61");
