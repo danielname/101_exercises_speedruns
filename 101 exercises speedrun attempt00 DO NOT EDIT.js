@@ -225,7 +225,9 @@ addToDone("Exercise 11 is correct.")
 // Documentation for comparison operators https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators#relational_operators
 // HINT - here are example functions using comparison operators https://gist.github.com/ryanorsinger/e843c7d0966993bd8193f0afabe16ae0
 // If you get stuck, be sure to check the example code and documentation listed above
-
+function isPositive (n){
+    return (n === Math.abs(n));
+}
 
 
 
@@ -244,7 +246,9 @@ addToDone("Exercise 12 is correct.")
 
 // Exercise 13
 // Write a function definition named isNegative that takes in a number and returns true or False if that number is negative.
-
+function isNegative(n){
+    return !isPositive(n)
+}
 
 
 assert(isNegative(positiveOddNumber), false, "Exercise 13");
@@ -256,7 +260,9 @@ addToDone("Exercise 13 is correct.")
 
 // Exercise 14
 // Write a function definition named isOdd that takes in a number and returns true or false if that number is odd.
-
+function isOdd(n){
+    return n % 2 !== 0;
+}
 assert(isOdd(positiveOddNumber), true, "Exercise 14");
 assert(isOdd(positiveEvenNumber), false, "Exercise 14");
 assert(isOdd(negativeOddNumber), true, "Exercise 14");
@@ -265,7 +271,9 @@ addToDone("Exercise 14 is correct.")
 
 // Exercise 15
 // Write a function definition named isEven that takes in a number and returns true or false if that number is even.
-
+function isEven(n){
+    return !isOdd(n);
+}
 assert(isEven(2), true, "Exercise 15");
 assert(isEven(positiveOddNumber), false, "Exercise 15");
 assert(isEven(positiveEvenNumber), true, "Exercise 15");
@@ -276,7 +284,9 @@ addToDone("Exercise 15 is correct.")
 
 // Exercise 16
 // Write a function definition named identity that takes in any input and returns that input. Don't overthink this one!
-
+function identity(input){
+    return input;
+}
 assert(identity(fruits), fruits, "Exercise 16");
 assert(identity(vegetables), vegetables, "Exercise 16");
 assert(identity(positiveOddNumber), positiveOddNumber, "Exercise 16");
@@ -288,7 +298,9 @@ addToDone("Exercise 16 is correct.")
 
 // Exercise 17
 // Write a function definition named isPositiveOdd that takes in a number and returns true or false if the value is both greater than zero and odd
-
+function isPositiveOdd(n){
+    return isPositive(n) && isOdd(n);
+}
 
 
 assert(isPositiveOdd(3), true, "Exercise 17");
@@ -301,7 +313,9 @@ addToDone("Exercise 17 is correct.")
 
 // Exercise 18
 // Write a function definition named isPositiveEven that takes in a number and returns true or false if the value is both greater than zero and even
-
+function isPositiveEven(n){
+    return isPositive(n) && !isOdd(n);
+}
 assert(isPositiveEven(4), true, "Exercise 18" );
 assert(isPositiveEven(positiveOddNumber), false, "Exercise 18");
 assert(isPositiveEven(positiveEvenNumber), true, "Exercise 18");
@@ -312,7 +326,9 @@ addToDone("Exercise 18 is correct.")
 
 // Exercise 19
 // Write a function definition named isNegativeOdd that takes in a number and returns true or false if the value is both less than zero and odd.
-
+function isNegativeOdd(n){
+    return !isPositive(n) && isOdd(n);
+}
 assert(isNegativeOdd(-3), true, "Exercise 19" );
 assert(isNegativeOdd(positiveOddNumber), false, "Exercise 19");
 assert(isNegativeOdd(positiveEvenNumber), false, "Exercise 19");
@@ -323,7 +339,9 @@ addToDone("Exercise 19 is correct.")
 
 // Exercise 20
 // Write a function definition named isNegativeEven that takes in a number and returns true or false if the value is both less than zero and even.
-
+function isNegativeEven(n){
+    return !isPositive(n) && !isOdd(n);
+}
 assert(isNegativeEven(-4), true, "Exercise 20" );
 assert(isNegativeEven(positiveOddNumber), false, "Exercise 20");
 assert(isNegativeEven(positiveEvenNumber), false, "Exercise 20");
@@ -335,7 +353,9 @@ addToDone("Exercise 20 is correct.")
 
 // Exercise 21
 // Write a function definition named half that takes in a number and returns half the provided number.
-
+function half(n){
+    returnn/2;
+}
 assert(half(4), 2, "Exercise 21");
 assert(half(5), 2.5, "Exercise 21");
 assert(half(positiveOddNumber), positiveOddNumber / 2, "Exercise 21");
@@ -348,7 +368,9 @@ addToDone("Exercise 21 is correct.")
 
 // Exercise 22
 // Write a function definition named double that takes in a number and returns double the provided number.
-
+function double(n){
+    return n * 2;
+}
 assert(double(4), 8, "Exercise 22");
 assert(double(5), 10, "Exercise 22");
 assert(double(positiveOddNumber), positiveOddNumber * 2, "Exercise 22");
@@ -361,7 +383,9 @@ addToDone("Exercise 22 is correct.")
 
 // Exercise 23
 // Write a function definition named triple that takes in a number and returns triple the provided number.
-
+function triple(n){
+    return n * 3;
+}
 assert(triple(4), 12, "Exercise 23");
 assert(triple(5), 15, "Exercise 23");
 assert(triple(positiveOddNumber), positiveOddNumber * 3, "Exercise 23");
@@ -374,7 +398,9 @@ addToDone("Exercise 23 is correct.")
 
 // Exercise 24
 // Write a function definition named reverseSign that takes in a number and returns the provided number but with the sign reversed.
-
+function reverseSign(n){
+    return -n;
+}
 assert(reverseSign(4), -4, "Exercise 24");
 assert(reverseSign(-5), 5, "Exercise 24");
 assert(reverseSign(positiveOddNumber), positiveOddNumber * -1, "Exercise 24");
@@ -387,7 +413,9 @@ addToDone("Exercise 24 is correct.")
 
 // Exercise 25
 // Write a function definition named absoluteValue that takes in a number and returns the absolute value of the provided number
-
+function absoluteValue(n){
+    return Math.abs(n);
+}
 assert(absoluteValue(4), 4, "Exercise 25");
 assert(absoluteValue(-5), 5, "Exercise 25");
 assert(absoluteValue(positiveOddNumber), positiveOddNumber, "Exercise 25");
@@ -400,7 +428,9 @@ addToDone("Exercise 25 is correct.")
 
 // Exercise 26
 // Write a function definition named isMultipleOfThree that takes in a number and returns true or false if the number is evenly divisible by 3.
-
+function  isMultipleOfThree (n){
+    return n % 3 === 0;
+}
 assert(isMultipleOfThree(3), true, "Exercise 26");
 assert(isMultipleOfThree(15), true, "Exercise 26");
 assert(isMultipleOfThree(9), true, "Exercise 26");
@@ -413,7 +443,9 @@ addToDone("Exercise 26 is correct.")
 
 // Exercise 27
 // Write a function definition named isMultipleOfFive that takes in a number and returns true or false if the number is evenly divisible by 5.
-
+function isMultipleOfFive(n){
+    return n % 5 === 0;
+}
 assert(isMultipleOfFive(3), false, "Exercise 27");
 assert(isMultipleOfFive(15), true, "Exercise 27");
 assert(isMultipleOfFive(9), false, "Exercise 27");
@@ -425,7 +457,9 @@ addToDone("Exercise 27 is correct.")
 
 // Exercise 28
 // Write a function definition named isMultipleOfBothThreeAndFive that takes in a number and returns true or false if the number is evenly divisible by both 3 and 5.
-
+function isMultipleOfBothThreeAndFive(n){
+    return isMultipleOfThree(n) && isMultipleOfFive(n);
+}
 assert(isMultipleOfBothThreeAndFive(15), true, "Exercise 28");
 assert(isMultipleOfBothThreeAndFive(45), true, "Exercise 28");
 assert(isMultipleOfBothThreeAndFive(3), false, "Exercise 28");
@@ -438,7 +472,9 @@ addToDone("Exercise 28 is correct.")
 
 // Exercise 29
 // Write a function definition named square that takes in a number and returns the number times itself.
-
+function square(n){
+    return n**2;
+}
 assert(square(3), 9, "Exercise 29");
 assert(square(2), 4, "Exercise 29");
 assert(square(9), 81, "Exercise 29");
@@ -449,7 +485,9 @@ addToDone("Exercise 29 is correct.")
 
 // Exercise 30
 // Write a function definition named add that takes in two numbers and returns the sum.
-
+function  add(n, n2){
+    return n+n2;
+}
 
 assert(add(3, 2), 5, "Exercise 30");
 assert(add(10, -2), 8, "Exercise 30");
@@ -460,7 +498,9 @@ addToDone("Exercise 30 is correct.")
 
 // Exercise 31
 // Write a function definition named cube that takes in a number and returns the number times itself, times itself.
-
+function cube(n){
+    return n**3;
+}
 assert(cube(3), 27, "Exercise 31");
 assert(cube(2), 8, "Exercise 31");
 assert(cube(5), 125, "Exercise 31");
