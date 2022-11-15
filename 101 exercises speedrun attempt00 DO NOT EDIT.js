@@ -40,7 +40,7 @@ function addToDone(message) {
 // Example problem setup: Create a variable named doingJSRightNow and assign it the boolean true.
 // The line below creates the variable named doingJSRightNow and assigns the boolean value true
 // To complete Exercise #0, uncomment the following line of JS
-// var doingJSRightNow = true
+ var doingJSRightNow = true;
 
 // The lines below will test your answer. If you see an error, then it means that your answer is incorrect or incomplete.
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined to understand this error message.
@@ -50,7 +50,7 @@ assert(doingJSRightNow, true, "Exercise 0");
 //  Exercise 1
 // On the line below, create a variable named onMarsRightNow and assign it the boolean value of false
 // For more on variables, see https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables
-
+let onMarsRightNow = false;
 assert(onMarsRightNow, false, "Exercise 1");
 addToDone("Exercise 1 is correct.");
 
